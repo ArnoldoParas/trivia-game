@@ -187,6 +187,7 @@ fn menu_ui(app: &mut App, ctx: &egui::Context) {
     .resizable(false)
     .show_separator_line(false)
     .show(ctx, |ui| {
+    ui.add_space(185.0);
     ui.vertical_centered(|ui| {
       ui.add(
         Image::new(egui::include_image!("../assets/img/logo.png"))
@@ -203,6 +204,7 @@ fn menu_ui(app: &mut App, ctx: &egui::Context) {
   
   CentralPanel::default().show(ctx, |ui| {
     ui.centered_and_justified(|ui| {
+      ui.add_space(315.0);
       ui.vertical_centered(|ui| {
         if ui.add_sized(egui::vec2(200.0, 50.0), egui::Button::new("Iniciar")).clicked() {
           app.screen = CurrentScreen::Ingame;
