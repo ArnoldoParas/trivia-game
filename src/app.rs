@@ -208,6 +208,7 @@ fn menu_ui(app: &mut App, ctx: &egui::Context) {
       ui.vertical_centered(|ui| {
         if ui.add_sized(egui::vec2(200.0, 50.0), egui::Button::new("Iniciar")).clicked() {
           app.screen = CurrentScreen::Ingame;
+          app.quiz.start_time = Instant::now();
         }
       });
     });
