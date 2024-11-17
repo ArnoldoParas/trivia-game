@@ -49,4 +49,4 @@ cargo run
 - [x] Crear sistema de rachas
 - [x] Notificar al jugador si gano o perdio en la pantalla de analisis
 - [x] Crear boton de volver a jugar
-- [ ] Acomodar el menu principal
+- [x] Acomodar el menu principal

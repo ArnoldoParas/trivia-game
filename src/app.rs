@@ -235,6 +235,7 @@ fn ingame_ui(app: &mut App, ctx: &egui::Context) {
         ui.label(
           RichText::new(&app.quiz.current_quiz.unidad_tematica)
             .size(15.0)
+            .color(WHITE)
         );
         ui.add_space(ui.available_width() - 60.);            
         if ui.add_sized(egui::vec2(25.0, 10.0), egui::Button::new("☰ Menu")).clicked() {
@@ -330,12 +331,12 @@ fn analisis_ui(app: &mut App, ctx: &egui::Context) {
       match app.health.hero_health {
         0.0 => {
           ui.centered_and_justified(|ui| {
-            ui.label(RichText::new("PERDISTE").family(egui::FontFamily::Name("CustomFont_1".into())).size(50.0))
+            ui.label(RichText::new("PERDISTE").family(egui::FontFamily::Name("CustomFont_1".into())).size(50.0).color(WHITE))
           })
         }
         _ => {
           ui.centered_and_justified(|ui| {
-            ui.label(RichText::new("GANASTE").family(egui::FontFamily::Name("CustomFont_1".into())).size(50.0))
+            ui.label(RichText::new("GANASTE").family(egui::FontFamily::Name("CustomFont_1".into())).size(50.0).color(WHITE))
           })  
         }
       };
@@ -348,42 +349,42 @@ fn analisis_ui(app: &mut App, ctx: &egui::Context) {
 
       ui.add_space(20.0);
       ui.vertical_centered(|ui| {
-        ui.label(RichText::new("Resultados").size(40.0))
+        ui.label(RichText::new("Resultados").size(40.0).color(WHITE))
       });
       ui.add_space(100.0);
       egui::Grid::new("results_table")
       .min_col_width(300.0)
       .spacing([40.0, 25.0])
       .show(ui, |ui| {
-        ui.vertical_centered(|ui| {ui.label(RichText::new("Cantidad de aciertos").size(18.0))});
-        ui.label(RichText::new(app.session_data.correct_answers.to_string()).size(18.0));
+        ui.vertical_centered(|ui| {ui.label(RichText::new("Cantidad de aciertos").size(18.0).color(WHITE))});
+        ui.label(RichText::new(app.session_data.correct_answers.to_string()).size(18.0).color(WHITE));
         ui.end_row();
   
-        ui.vertical_centered(|ui| {ui.label(RichText::new("Numero de respuestas erroneas").size(18.0))});
-        ui.label(RichText::new(app.session_data.wrong_answers.to_string()).size(18.0));
+        ui.vertical_centered(|ui| {ui.label(RichText::new("Numero de respuestas erroneas").size(18.0).color(WHITE))});
+        ui.label(RichText::new(app.session_data.wrong_answers.to_string()).size(18.0).color(WHITE));
         ui.end_row();
         
-        ui.vertical_centered(|ui| {ui.label(RichText::new("Procentaje de aciertos").size(18.0))});
-        ui.label(RichText::new(format!("{}%",hit_percentage.to_string())).size(18.0));
+        ui.vertical_centered(|ui| {ui.label(RichText::new("Procentaje de aciertos").size(18.0).color(WHITE))});
+        ui.label(RichText::new(format!("{}%",hit_percentage.to_string())).size(18.0).color(WHITE));
         ui.end_row();
         
-        ui.vertical_centered(|ui| {ui.label(RichText::new("Mejor racha de aciertos").size(18.0))});
-        ui.label(RichText::new(app.session_data.win_streak.0.to_string()).size(18.0));
+        ui.vertical_centered(|ui| {ui.label(RichText::new("Mejor racha de aciertos").size(18.0).color(WHITE))});
+        ui.label(RichText::new(app.session_data.win_streak.0.to_string()).size(18.0).color(WHITE));
         ui.end_row();
         
-        ui.vertical_centered(|ui| {ui.label(RichText::new("Mayor daño inflingido").size(18.0))});
-        ui.label(RichText::new(format!("{} pts",app.session_data.best_hit)).size(18.0));
+        ui.vertical_centered(|ui| {ui.label(RichText::new("Mayor daño inflingido").size(18.0).color(WHITE))});
+        ui.label(RichText::new(format!("{} pts",app.session_data.best_hit)).size(18.0).color(WHITE));
         ui.end_row();
         
-        ui.vertical_centered(|ui| {ui.label(RichText::new("Vida total perdida").size(18.0))});
-        ui.label(RichText::new(format!("{}%",lost_health.to_string())).size(18.0));
+        ui.vertical_centered(|ui| {ui.label(RichText::new("Vida total perdida").size(18.0).color(WHITE))});
+        ui.label(RichText::new(format!("{}%",lost_health.to_string())).size(18.0).color(WHITE));
         ui.end_row();
       });
       ui.add_space(50.0);
       ui.vertical_centered(|ui| {
         if ui.add_sized(
           egui::vec2(250.0, 45.0),
-          egui::Button::new(RichText::new("Volver a jugar").size(15.0))
+          egui::Button::new(RichText::new("Volver a jugar").size(15.0).color(WHITE))
         ).clicked() {
           app.health = HealthStatus::default();
           app.quiz = Quiz::default();
