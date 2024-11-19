@@ -1,8 +1,12 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+mod app;
+mod components;
+
+use crate::app::App;
+
 use std::{fs::File, io::Read};
 use eframe::egui;
-use calabozos_y_preguntones::app::App;
 use egui::FontDefinitions;
 
 fn main() -> eframe::Result {
