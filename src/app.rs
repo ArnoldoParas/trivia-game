@@ -242,9 +242,9 @@ fn ingame_ui(app: &mut App, ctx: &egui::Context) {
             .color(WHITE)
         );
         ui.add_space(ui.available_width() - 60.);            
-        if ui.add_sized(egui::vec2(25.0, 10.0), egui::Button::new("☰ Menu")).clicked() {
-          println!("Botón clicado!");
-        }
+        // if ui.add_sized(egui::vec2(25.0, 10.0), egui::Button::new("☰ Menu")).clicked() {
+        //   println!("Botón clicado!");
+        // }
       });
     });
     ui.separator();
