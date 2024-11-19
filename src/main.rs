@@ -1,5 +1,6 @@
-use std::{fs::File, io::Read};
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+use std::{fs::File, io::Read};
 use eframe::egui;
 use calabozos_y_preguntones::app::App;
 use egui::FontDefinitions;
