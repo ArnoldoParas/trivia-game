@@ -51,48 +51,95 @@ pub fn question_mode_1(ui: &mut Ui, app: &mut App) {
 
   ui.vertical_centered(|ui| {
     ui.add_space(spacing);
-    for (key, answer) in answers.iter() {
-      if correct_ans == key {
+
+    match app.quiz.current_quiz.tipo_reactivo.as_str() {
+      "Ejercicio_v2" => {
+        ui.add(
+          egui::TextEdit::singleline(&mut app.quiz.answer)
+            .hint_text("0.0000")
+            .desired_width(350.0)
+            .font(egui::FontId::new(20.0, egui::FontFamily::Proportional))
+        );
+        ui.label(RichText::new("Digite solo 4 decimales").size(15.0));
+        ui.add_space(50.0);
         let clicked = ui.add_enabled_ui(!app.rnd_animation.is_animating, |ui| {
           ui.add_sized(
             button_size,
-            egui::Button::new(RichText::new(answer).size(15.0))
-              .fill(Color32::DARK_GREEN)
+            egui::Button::new(RichText::new("Ingresar").size(15.0))
           ).clicked()
         }).inner;
         if clicked {
-          app.session_data.total_quiz += 1;
-          app.session_data.correct_answers += 1;
-
-          let (mut best_streak, mut current_streak) = app.session_data.win_streak;
-          current_streak += 1;
-          if current_streak >= best_streak {
-            best_streak = current_streak;
+          if &app.quiz.answer == app.quiz.current_quiz.respuestas.get(&app.quiz.current_quiz.respuesta_correcta).unwrap() {
+            app.session_data.total_quiz += 1;
+            app.session_data.correct_answers += 1;
+  
+            let (mut best_streak, mut current_streak) = app.session_data.win_streak;
+            current_streak += 1;
+            if current_streak >= best_streak {
+              best_streak = current_streak;
+            }
+  
+            app.session_data.win_streak.0 = best_streak;
+            app.session_data.win_streak.1 = current_streak;
+            app.rnd_animation.is_animating = true;
+            app.rnd_animation.animation_start = Some(Instant::now());
+          }else {
+            app.streak = StreakState::NoStreak;
+            app.health.hero_health -= 0.1;
+            app.health.hero_health = app.health.hero_health.clamp(0.0, 1.0);
+            app.session_data.total_quiz += 1;
+            app.session_data.wrong_answers += 1;
+            app.session_data.win_streak.1 = 0;
+            select_new_quiz(app);
           }
-
-          app.session_data.win_streak.0 = best_streak;
-          app.session_data.win_streak.1 = current_streak;
-          app.rnd_animation.is_animating = true;
-          app.rnd_animation.animation_start = Some(Instant::now());
-        }
-      }else {
-        let clicked = ui.add_enabled_ui(!app.rnd_animation.is_animating, |ui| {
-          ui.add_sized(
-            button_size,
-            egui::Button::new(RichText::new(answer).size(15.0))
-          ).clicked()
-        }).inner;
-        if clicked {
-          app.streak = StreakState::NoStreak;
-          app.health.hero_health -= 0.1;
-          app.health.hero_health = app.health.hero_health.clamp(0.0, 1.0);
-          app.session_data.total_quiz += 1;
-          app.session_data.wrong_answers += 1;
-          app.session_data.win_streak.1 = 0;
-          select_new_quiz(app);
+          app.quiz.answer.clear();
+        };
+      },
+      _ => {
+        for (key, answer) in answers.iter() {
+          if correct_ans == key {
+            let clicked = ui.add_enabled_ui(!app.rnd_animation.is_animating, |ui| {
+              ui.add_sized(
+                button_size,
+                egui::Button::new(RichText::new(answer).size(15.0))
+                  .fill(Color32::DARK_GREEN)
+              ).clicked()
+            }).inner;
+            if clicked {
+              app.session_data.total_quiz += 1;
+              app.session_data.correct_answers += 1;
+    
+              let (mut best_streak, mut current_streak) = app.session_data.win_streak;
+              current_streak += 1;
+              if current_streak >= best_streak {
+                best_streak = current_streak;
+              }
+    
+              app.session_data.win_streak.0 = best_streak;
+              app.session_data.win_streak.1 = current_streak;
+              app.rnd_animation.is_animating = true;
+              app.rnd_animation.animation_start = Some(Instant::now());
+            }
+          }else {
+            let clicked = ui.add_enabled_ui(!app.rnd_animation.is_animating, |ui| {
+              ui.add_sized(
+                button_size,
+                egui::Button::new(RichText::new(answer).size(15.0))
+              ).clicked()
+            }).inner;
+            if clicked {
+              app.streak = StreakState::NoStreak;
+              app.health.hero_health -= 0.1;
+              app.health.hero_health = app.health.hero_health.clamp(0.0, 1.0);
+              app.session_data.total_quiz += 1;
+              app.session_data.wrong_answers += 1;
+              app.session_data.win_streak.1 = 0;
+              select_new_quiz(app);
+            }
+          }
+          ui.add_space(spacing);
         }
       }
-      ui.add_space(spacing);
     }
   });
 }
