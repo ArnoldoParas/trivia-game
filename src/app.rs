@@ -103,6 +103,7 @@ impl Default for Quiz {
       used_quiz_idx: 1,
       duration,
       start_time: Instant::now(),
+      answer: String::new()
     }
   }
 }
