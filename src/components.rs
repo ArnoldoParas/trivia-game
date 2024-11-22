@@ -108,7 +108,6 @@ pub fn question_mode_1(ui: &mut Ui, app: &mut App) {
               ui.add_sized(
                 button_size,
                 egui::Button::new(RichText::new(answer).size(15.0))
-                  .fill(Color32::DARK_GREEN)
               ).clicked()
             }).inner;
             if clicked {
