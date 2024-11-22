@@ -89,7 +89,7 @@ pub struct Quiz {
 
 impl Default for Quiz {
   fn default() -> Self {
-    let json_str = std::fs::read_to_string("assets/data/preguntas_copy.json").unwrap();
+    let json_str = std::fs::read_to_string("assets/data/preguntas.json").unwrap();
     let quiz_items: Vec<QuizItem> = serde_json::from_str(&json_str).unwrap();
     let rng = rand::thread_rng().gen_range(0..quiz_items.len());
     let quiz = quiz_items[rng].clone();
