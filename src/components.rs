@@ -287,6 +287,7 @@ pub fn select_new_quiz(app: &mut App) {
     "Verdadero o Falso" => Duration::from_secs(16),
     "Ejercicio_v1" => Duration::from_secs(900),
     "Ejercicio_v2" => Duration::from_secs(900),
+    "Ejercicio_v3" => Duration::from_secs(900),
     _ => Duration::from_secs(0)
   };
   app.quiz.start_time = Instant::now();
