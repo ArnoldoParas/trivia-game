@@ -1,7 +1,7 @@
 [
     {
-        "Unidad Temática" : "1 - Fundamentos de simulación y modelación",
-        "Pregunta" : "Se refiere al paso en el cual definimos la claridad y exactitud que va a requerir el modelo para producir los resultados deseados",
+        "Unidad Temática" : "1 - Fundamentos de simulación y modelación (Introducción a Simulación)",
+        "Pregunta" : "Se refiere al paso en el cuál definimos la claridad y exactitud que va a requerir el modelo para producir los resultados deseados",
         "Respuestas" : {
             "a": "Colección de Datos", 
             "b": "Experimentación", 
@@ -13,7 +13,31 @@
 
     },
     {
-        "Unidad Temática" : "1 - Fundamentos de simulación y modelación",
+        "Unidad Temática" : "1 - Fundamentos de simulación y modelación (Introducción a Simulación)",
+        "Pregunta" : "Paso en el cuál se interpretan los resultados que proporciona la simulación ",
+        "Respuestas" : {
+            "a": "Interpretación", 
+            "b": "Documentación",
+            "c": "Experimentación",
+            "d": "Colección de datos"
+        },
+        "Respuesta correcta" : "a",
+        "Tipo de reactivo" : "Opción Múltiple"  
+    },
+    {
+        "Unidad Temática" : "1 - Fundamentos de simulación y modelación (Introducción a Simulación)",
+        "Pregunta" : "En la colección de datos, la información se puede obtener por...",
+        "Respuestas" : {
+            "a": "Prueba de Series", 
+            "b": "Simulación",
+            "c": "Registros contables",
+            "d": "Generación de variables aleatorias"
+        },
+        "Respuesta correcta" : "c",
+        "Tipo de reactivo" : "Opción Múltiple"  
+    },
+    {
+        "Unidad Temática" : "1 - Fundamentos de simulación y modelación (Introducción a Simulación)",
         "Pregunta" : "La última fase del ciclo de vida del desarrollo de sistemas es 'Implementación y evaluación del sistema' ",
         "Respuestas" : {
             "V": "Verdadero", 
@@ -24,7 +48,29 @@
 
     },
     {
-        "Unidad Temática" : "1 - Fundamentos de simulación y modelación",
+        "Unidad Temática" : "1 - Fundamentos de simulación y modelación (Introducción a Simulación)",
+        "Pregunta" : "El ciclo de vida de desarrollo de sistemas consta de 9 fases",
+        "Respuestas" : {
+            "V": "Verdadero", 
+            "F": "Falso"
+        },
+        "Respuesta correcta" : "F",
+        "Tipo de reactivo" : "Verdadero o Falso"     
+
+    },
+    {
+        "Unidad Temática" : "1 - Fundamentos de simulación y modelación (Introducción a Simulación)",
+        "Pregunta" : "Las salidas del sistema sirven como retroalimentación que compara el desempeño con los objetivos",
+        "Respuestas" : {
+            "V": "Verdadero", 
+            "F": "Falso"
+        },
+        "Respuesta correcta" : "V",
+        "Tipo de reactivo" : "Verdadero o Falso"     
+
+    },
+    {
+        "Unidad Temática" : "1 - Fundamentos de simulación y modelación (Generación de Números Aleatorios)",
         "Pregunta" : "Es el proceso para generar variables aleatorias no uniformes",
         "Respuestas" : {
             "a": "Provisión externa", 
@@ -37,7 +83,7 @@
 
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Números Aleatorios)",
         "Pregunta" : "A que generador coreresponde la formula: Xn+1 = (aXn + c) mod m",
         "Respuestas" : {
             "a": "Generador congruencial multiplicativo", 
@@ -49,7 +95,7 @@
         "Tipo de reactivo" : "Opción Múltiple"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Números Aleatorios)",
         "Pregunta" : "Determine el periodo del siguiente generador congruencial: Xn+1 = (5Xn) mod 64 ; X0 = 7",
         "Respuestas" : {
             "a": "El periodo es completo y los números rectangulares son aceptados.", 
@@ -59,7 +105,7 @@
         "Tipo de reactivo" : "Ejercicio_v1"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Números Aleatorios)",
         "Pregunta" : "Determine el periodo del siguiente generador congruencial: Xn+1 = (11Xn) mod 128 ; X0 = 9",
         "Respuestas" : {
             "a": "El periodo es completo y los números rectangulares son aceptados.", 
@@ -69,7 +115,7 @@
         "Tipo de reactivo" : "Ejercicio_v1"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Números Aleatorios)",
         "Pregunta" : "Determine el periodo del siguiente generador congruencial: Xn+1 = (8Xn + 16) mod 100 ; X0 = 15",
         "Respuestas" : {
             "a": "El periodo es completo y los números rectangulares son aceptados.", 
@@ -79,8 +125,8 @@
         "Tipo de reactivo" : "Ejercicio_v1"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
-        "Pregunta" : "Efectúe la prueba de promedios para los siguientes números rectangulares(alpha = 5%): 0.34712 0.99358 0.79750 0.23584 0.81921 0.93394 0.17855 0.19192 0.25276 0.21399",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Pruebas Estadísticas)",
+        "Pregunta" : "Efectúe la prueba de promedios para los siguientes números rectangulares (alpha = 5%): 0.34712 0.99358 0.79750 0.23584 0.81921 0.93394 0.17855 0.19192 0.25276 0.21399",
         "Respuestas" : {
             "a": "Los números rectangulares son aceptados", 
             "b": "Los números rectangulares son rechazados"
@@ -89,8 +135,28 @@
         "Tipo de reactivo" : "Ejercicio_v1"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
-        "Pregunta" : "Efectúe la prueba de Kolmogorov-Smirnov para los siguientes números rectangulares con un nivel de significancia del 5%: 0.38017 0.92561 0.04793 0.61358 0.29845 0.75106 0.46920 0.83274 0.15960 0.57482",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Pruebas Estadísticas)",
+        "Pregunta" : "Efectúe la prueba de frecuencias para los siguientes números rectangulares (alpha = 5%) n = 4: 0.38291 0.71546 0.94823 0.16758 0.53014 0.29675 0.85130 0.47926 0.60381 0.02457",
+        "Respuestas" : {
+            "a": "Los números rectangulares son aceptados", 
+            "b": "Los números rectangulares son rechazados"
+        },
+        "Respuesta correcta" : "a",
+        "Tipo de reactivo" : "Ejercicio_v1"     
+    },
+    {
+        "Unidad Temática" : "2 - Generación de valores para simulación (Pruebas Estadísticas)",
+        "Pregunta" : "Efectúe la prueba de series para los siguientes números rectangulares (alpha = 5%) n = 4: 0.38291 0.71546 0.94823 0.16758 0.53014 0.29675 0.85130 0.47926 0.60381 0.02457",
+        "Respuestas" : {
+            "a": "Los números rectangulares son aceptados", 
+            "b": "Los números rectangulares son rechazados"
+        },
+        "Respuesta correcta" : "a",
+        "Tipo de reactivo" : "Ejercicio_v1"     
+    },
+    {
+        "Unidad Temática" : "2 - Generación de valores para simulación (Pruebas Estadísticas)",
+        "Pregunta" : "Efectúe la prueba de Kolmogorov-Smirnov para los siguientes números rectangulares (alpha = 5%): 0.38017 0.92561 0.04793 0.61358 0.29845 0.75106 0.46920 0.83274 0.15960 0.57482",
         "Respuestas" : {
             "a": "Los números rectangulares son aceptados", 
             "b": "Los números rectangulares son rechazados"
@@ -100,7 +166,7 @@
     }
     ,
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Pruebas Estadísticas)",
         "Pregunta" : "Aplica la fórmula de distribución exponencial para los siguientes números y obtén el tiempo promedio: 0.73582 0.16945 0.92837 0.50123 0.34761 0.89012 0.25678 0.61439 0.48320 0.07564",
         "Respuestas" : {
             "a": "0.1835"
@@ -109,7 +175,7 @@
         "Tipo de reactivo" : "Ejercicio_v2"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "Usa la fórmula de distribución exponencial para los siguientes números y obtén el tiempo promedio: 0.73529 0.18463 0.95714 0.42857 0.60392 0.87159 0.31416 0.59236 0.26789 0.04831"   ,
         "Respuestas" : {
             "a": "0.1912" 
@@ -119,7 +185,7 @@
     }
     ,
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "Usa la fórmula de distribución uniforme y calcula el valor de x6 (a = 3; b = 7): 0.38291 0.71546 0.94823 0.16758 0.53014 0.29675 0.85130 0.47926 0.60381 0.02457",
         "Respuestas" : {
             "a": "4.1870"
@@ -128,7 +194,7 @@
         "Tipo de reactivo" : "Ejercicio_v2"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "Usa la fórmula de distribución uniforme y calcula el valor de x10 (a = 4; b = 9): 0.73582 0.16945 0.92837 0.50123 0.34761 0.89012 0.25678 0.61439 0.48320 0.07564",
         "Respuestas" : {
             "a": "4.3782"
@@ -137,7 +203,7 @@
         "Tipo de reactivo" : "Ejercicio_v2"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "Usa la fórmula de distribución empírica y calcula el valor de x2: 0.73582 0.16945 0.92837 0.50123 0.34761 0.89012 0.25678 0.61439 0.48320 0.07564",
         "Respuestas" : {
             "a": "0.5282"
@@ -146,7 +212,7 @@
         "Tipo de reactivo" : "Ejercicio_v2"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "Usa la fórmula de distribución empírica y calcula el valor de x7: 0.38295 0.71828 0.61803 0.44721 0.98653 0.14142 0.57735 0.86603 0.23607 0.32456",
         "Respuestas" : {
             "a": "1.1547"
@@ -155,7 +221,7 @@
         "Tipo de reactivo" : "Ejercicio_v2"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "Usa la fórmula de distribución de poisson y calcula el valor de x4 si lambda = 3:",
         "Respuestas" : {
             "a": "0.8152"
@@ -164,7 +230,7 @@
         "Tipo de reactivo" : "Ejercicio_v2"     
     },
     {
-        "Unidad Temática" : "2 - Generación de valores para simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "Usa la fórmula de distribución de poisson y determina el valor de x7 si lambda = 5:",
         "Respuestas" : {
             "a": "0.7248"
@@ -174,7 +240,7 @@
     }
     ,
     {
-        "Unidad Temática" : "1 - Fundamentos de simulación y modelación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Pruebas Estadísticas)",
         "Pregunta" : "En la prueba de Kolmogorov-Smirnov se toma como valor estadístico a partir de la siguiente fórmula Dn = max|(F(xi)*xi) - xi|",
         "Respuestas" : {
             "V": "Verdadero", 
@@ -184,7 +250,7 @@
         "Tipo de reactivo" : "Verdadero o Falso"     
     },
     {
-        "Unidad Temática" : "1 - Fundamentos de simulación y modelación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Pruebas Estadísticas)",
         "Pregunta" : "¿A qué prueba corresponde la siguiente formula x^2 = 1/FEi  i=1, n ∑ (FOi-FEi)^2?",
         "Respuestas" : {
             "a": "Prueba de Series", 
@@ -196,7 +262,7 @@
         "Tipo de reactivo" : "Opción Múltiple"  
     },
     {
-        "Unidad Temática" : "3 - Modelación y Simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "Las variables aleatorias no-uniformes no son pieza fundamental de cualquier simulación",
         "Respuestas" : {
             "V": "Verdadero", 
@@ -206,7 +272,7 @@
         "Tipo de reactivo" : "Verdadero o Falso"
     },
     {
-        "Unidad Temática" : "Modelación y Simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "¿En cuál de las siguientes distribuciones se debe calcular la distribución acumulada?",
         "Respuestas" : {
             "a": "Distribución Empírica ", 
@@ -218,7 +284,7 @@
         "Tipo de reactivo" : "Opción Múltiple"  
     },
     {
-        "Unidad Temática" : "Modelación y Simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "¿A qué distribución corresponde la siguiente fórmula?: x = a + (b-a)R",
         "Respuestas" : {
             "a": "Distribución de Poisson", 
@@ -230,7 +296,7 @@
         "Tipo de reactivo" : "Opción Múltiple"  
     },
     {
-        "Unidad Temática" : "Modelación y Simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "¿En cuál distribución la variable aleatoria toma el valor de √2R si R ≤ 1/2?",
         "Respuestas" : {
             "a": "Distribución Uniforme", 
@@ -242,7 +308,7 @@
         "Tipo de reactivo" : "Opción Múltiple"  
     },
     {
-        "Unidad Temática" : "3 - Modelación y Simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "En la distribución exponencial, el número rectangular no es necesario que sea previamente aprobado",
         "Respuestas" : {
             "V": "Verdadero", 
@@ -252,7 +318,7 @@
         "Tipo de reactivo" : "Verdadero o Falso"
     },
     {
-        "Unidad Temática" : "3 - Modelación y Simulación",
+        "Unidad Temática" : "2 - Generación de valores para simulación (Generación de Variables Aleatorias no-uniformes)",
         "Pregunta" : "En la distribución exponencial, el número rectangular no es necesario que sea previamente aprobado",
         "Respuestas" : {
             "V": "Verdadero", 
@@ -260,6 +326,71 @@
         },
         "Respuesta correcta" : "V",
         "Tipo de reactivo" : "Verdadero o Falso"
+    },
+    {
+        "Unidad Temática" : "3 - Modelación y simulación (Factores)",
+        "Pregunta" : "¿Cuál de las siguientes opciones no es un área donde la simulación puede ser aplicada?",
+        "Respuestas" : {
+            "a": "Sistema de  colas", 
+            "b": "Sistema de inventarios",
+            "c": "Conteo de piezas",
+            "d": "Proyectos de inversión"
+        },
+        "Respuesta correcta" : "c",
+        "Tipo de reactivo" : "Opción Múltiple"
+    },
+    {
+        "Unidad Temática" : "3 - Modelación y simulación (Factores)",
+        "Pregunta" : "La simulación está basada fuertemente en la teoría de probabilidad y estadística, matemáticas, etc.",
+        "Respuestas" : {
+            "V": "Verdadero", 
+            "F": "Falso"
+        },
+        "Respuesta correcta" : "V",
+        "Tipo de reactivo" : "Verdadero o Falso"
+    },
+    {
+        "Unidad Temática" : "3 - Modelación y Simulación (Factores)",
+        "Pregunta" : "No es necesario desarrollar un software de simulación en caso de no contar con uno",
+        "Respuestas" : {
+            "V": "Verdadero", 
+            "F": "Falso"
+        },
+        "Respuesta correcta" : "F",
+        "Tipo de reactivo" : "Verdadero o Falso"
+    },
+    {
+        "Unidad Temática" : "3 - Modelación y simulación (Factores)",
+        "Pregunta" : "¿Cuál de las siguientes opciones es un factor importante en la simulación?",
+        "Respuestas" : {
+            "a": "Sistema de  colas", 
+            "b": "Tamaño de la muestra",
+            "c": "Conteo de piezas",
+            "d": "Proyectos de inversión"
+        },
+        "Respuesta correcta" : "b",
+        "Tipo de reactivo" : "Opción Múltiple"
+    },
+    {
+        "Unidad Temática" : "3 - Modelación y simulación (Factores)",
+        "Pregunta" : "Seleccione una de las ventajas de la simulación",
+        "Respuestas" : {
+            "a": "Aumento de costos", 
+            "b": "Lleva mucho tiempo",
+            "c": "Proyectos de inversión",
+            "d": "Experimentar nuevas situaciones"
+        },
+        "Respuesta correcta" : "d",
+        "Tipo de reactivo" : "Opción Múltiple"
+    },
+    {
+        "Unidad Temática" : "3 - Modelación y simulación (Aplicaciones)",
+        "Pregunta" : "Un inversor inicia con $10,000 y desea llegar a $20,000. Cada día, invierte una cierta cantidad en una acción particular. Si el precio de la acción sube, dobla su inversión; si baja, mantiene la misma inversión. Suponiendo que la probabilidad de que la acción suba es del 50%, ¿Llego a la meta en diez dias? Usa los siguientes diez números aleatorios 0.73529 0.18463 0.95714 0.42857 0.60392 0.87159 0.31416 0.59236 0.26789 0.04831",
+        "Respuestas" : {
+            "a": "Sí, llego a la meta en 10 días", 
+            "b": "No pudo cumplir la meta en 10 días"
+        },
+        "Respuesta correcta" : "b",
+        "Tipo de reactivo" : "Ejercicio_v3"
     }
-    
 ]

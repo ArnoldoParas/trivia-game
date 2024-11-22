@@ -1,7 +1,7 @@
 [
     {
-        "Unidad Temática" : "3 - Modelación y simulación",
-        "Pregunta" : "Un inversor inicia con $10,000 y desea llegar a $20,000. Cada día, invierte una cierta cantidad en una acción particular. Si el precio de la acción sube, dobla su inversión; si baja, mantiene la misma inversión. Suponiendo que la probabilidad de que la acción suba es del 50%,\n\n ¿Llego a la meta en diez dias?\n\n Usa los siguientes diez números aleatorios:\n 0.73529 0.18463 0.95714 0.42857 0.60392 0.87159 0.31416 0.59236 0.26789 0.04831",
+        "Unidad Temática" : "3 - Modelación y simulación (Aplicaciones)",
+        "Pregunta" : "Un inversor inicia con $10,000 y desea llegar a $20,000. Cada día, invierte una cierta cantidad en una acción particular. Si el precio de la acción sube, dobla su inversión; si baja, mantiene la misma inversión. Suponiendo que la probabilidad de que la acción suba es del 50%, ¿Llego a la meta en diez dias? Usa los siguientes diez números aleatorios 0.73529 0.18463 0.95714 0.42857 0.60392 0.87159 0.31416 0.59236 0.26789 0.04831",
         "Respuestas" : {
             "a": "Sí, llego a la meta en 10 días", 
             "b": "No pudo cumplir la meta en 10 días"
@@ -9,5 +9,4 @@
         "Respuesta correcta" : "b",
         "Tipo de reactivo" : "Ejercicio_v3"
     }
-    
 ]
