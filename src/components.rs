@@ -60,7 +60,7 @@ pub fn question_mode_1(ui: &mut Ui, app: &mut App) {
             .desired_width(350.0)
             .font(egui::FontId::new(20.0, egui::FontFamily::Proportional))
         );
-        ui.label(RichText::new("Digite solo 4 decimales").size(15.0));
+        // ui.label(RichText::new("Digite solo 4 decimales").size(15.0));
         ui.add_space(50.0);
         let clicked = ui.add_enabled_ui(!app.rnd_animation.is_animating, |ui| {
           ui.add_sized(
@@ -68,8 +68,14 @@ pub fn question_mode_1(ui: &mut Ui, app: &mut App) {
             egui::Button::new(RichText::new("Ingresar").size(15.0))
           ).clicked()
         }).inner;
+        let res = app.quiz.answer.replace('.', ".");
+        let mut res = res.parse::<f32>().unwrap_or(0.0);
+        res *= 10000.0;
+        let mut res = res.trunc();
+        res /= 10000.0;        
+        
         if clicked {
-          if &app.quiz.answer == app.quiz.current_quiz.respuestas.get(&app.quiz.current_quiz.respuesta_correcta).unwrap() {
+          if &res.to_string() == app.quiz.current_quiz.respuestas.get(&app.quiz.current_quiz.respuesta_correcta).unwrap() {
             app.session_data.total_quiz += 1;
             app.session_data.correct_answers += 1;
   
