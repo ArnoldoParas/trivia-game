@@ -1,5 +1,11 @@
 use crate::components;
-use std::{collections::HashMap, time::{Duration, Instant}};
+use std::{
+  collections::HashMap, 
+  time::{
+    Duration,
+    Instant
+  }
+};
 use egui::{Align, CentralPanel, Color32, Image, Layout, RichText, SidePanel, TopBottomPanel};
 use rand::Rng;
 use serde::{Deserialize, Serialize};
@@ -83,7 +89,7 @@ pub struct Quiz {
 
 impl Default for Quiz {
   fn default() -> Self {
-    let json_str = std::fs::read_to_string("assets/data/preguntas.json").unwrap();
+    let json_str = std::fs::read_to_string("assets/data/preguntas_copy.json").unwrap();
     let quiz_items: Vec<QuizItem> = serde_json::from_str(&json_str).unwrap();
     let rng = rand::thread_rng().gen_range(0..quiz_items.len());
     let quiz = quiz_items[rng].clone();
@@ -93,6 +99,7 @@ impl Default for Quiz {
       "Verdadero o Falso" => Duration::from_secs(16),
       "Ejercicio_v1" => Duration::from_secs(900),
       "Ejercicio_v2" => Duration::from_secs(900),
+      "Ejercicio_v3" => Duration::from_secs(900),
       _ => Duration::from_secs(0)
     };
 
@@ -318,9 +325,15 @@ fn ingame_ui(app: &mut App, ctx: &egui::Context) {
       components::timer(ui, app, remaining);
       
       ui.with_layout(egui::Layout::bottom_up(egui::Align::Center), |ui| {
-        ui.label(egui::RichText::new(&app.quiz.current_quiz.pregunta)
-        .size(30.)
-        .color(WHITE));
+        if app.quiz.current_quiz.tipo_reactivo == "Ejercicio_v3" {
+          ui.label(egui::RichText::new(&app.quiz.current_quiz.pregunta)
+          .size(19.)
+          .color(WHITE));
+        }else {
+          ui.label(egui::RichText::new(&app.quiz.current_quiz.pregunta)
+          .size(30.)
+          .color(WHITE));
+        }
       });
     }
   });
